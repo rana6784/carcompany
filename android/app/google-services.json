@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "771555012166",
+    "project_id": "carcompany-848a1",
+    "storage_bucket": "carcompany-848a1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771555012166:android:a948908543d20f9c10e447",
+        "android_client_info": {
+          "package_name": "com.example.carcompany"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaG7tS9Wpl7VC6OlY3YIJeRAPwLWXu4jg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
