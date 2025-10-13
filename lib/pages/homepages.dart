@@ -198,7 +198,7 @@ class _HomepagesState extends State<Homepages> {
               Image.asset('assets/car.png', height: 180),
               const SizedBox(height: 40),
               Container(
-                height: 4000,
+                height: 5000,
                 width: 700,
                 color: Colors.white,
                 child: Column(
@@ -480,6 +480,290 @@ class _HomepagesState extends State<Homepages> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 40),
+
+                    Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundImage: AssetImage(
+                                    "assets/girl1.png",
+                                  ),
+                                ),
+                                SizedBox(width: 20),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "Emma Rodriguez",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 40),
+                                      child: Text(
+                                        "Barcelona, Spain",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 30),
+                            Row(
+                              children: [
+                                Padding(padding: EdgeInsets.only(left: 20)),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "I've rented cars from various",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "companies,but the experiance with",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "CarRental wasw exceptional!",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 30),
+                    Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundImage: AssetImage(
+                                    "assets/girl2.png",
+                                  ),
+                                ),
+                                SizedBox(width: 20),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "John Smith",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "New York, USA",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 30),
+                            Row(
+                              children: [
+                                Padding(padding: EdgeInsets.only(left: 20)),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "CarRental made by trip so much",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "easier. The car was dwlivered right to",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "my door, and the customer service",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "was fantastic!",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 40),
+                    Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundImage: AssetImage(
+                                    "assets/girl1.png",
+                                  ),
+                                ),
+                                SizedBox(width: 20),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "Ava Johnson",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+
+                                    Text(
+                                      "syndey, Australia",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 40),
+                            Row(
+                              children: [
+                                Padding(padding: EdgeInsets.only(left: 20)),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                                Image.asset("assets/stars.png", height: 20),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "I highly recommend CarRental!",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "Their fleet is amazing, and i always",
+                                style: TextStyle(
+                                  color: const Color.fromRGBO(158, 158, 158, 1),
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "feel like i'm getting the best deal with",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                "Excellent Service!",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 50),
                   ],
                 ),
               ),

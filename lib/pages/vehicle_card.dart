@@ -64,8 +64,11 @@ class VehicleCard extends StatelessWidget {
                   ),
                   child: Text(
                     price,
-                    style: TextStyle(color: Colors.white, fontSize: 16,
-                    fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -89,20 +92,24 @@ class VehicleCard extends StatelessWidget {
                   SizedBox(height: 8),
                   Wrap(
                     spacing: 8,
-                    children: details.map((detail) {
-                      // Map each detail to an icon and text pair dynamically
-                      return Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          _getIconForDetail(detail),
-                          SizedBox(width: 4),
-                          Text(
-                            detail,
-                            style: TextStyle(color: Colors.grey[600], fontSize: 14),
-                          ),
-                        ],
-                      );
-                    }).toList(),
+                    children:
+                        details.map((detail) {
+                          // Map each detail to an icon and text pair dynamically
+                          return Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              _getIconForDetail(detail),
+                              SizedBox(width: 4),
+                              Text(
+                                detail,
+                                style: TextStyle(
+                                  color: Colors.grey[600],
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          );
+                        }).toList(),
                   ),
                 ],
               ],
@@ -119,29 +126,28 @@ class VehicleCard extends StatelessWidget {
       case '4 Seats':
         return Icon(Icons.people_outline, size: 16, color: Colors.grey[600]);
       case 'Hybrid':
-        return Icon(Icons.local_gas_station_outlined, size: 16, color: Colors.grey[600]);
+        return Icon(
+          Icons.local_gas_station_outlined,
+          size: 16,
+          color: Colors.grey[600],
+        );
       case 'Semi-Automatic':
-        return Icon(Icons.directions_car_outlined, size: 16, color: Colors.grey[600]);
+        return Icon(
+          Icons.directions_car_outlined,
+          size: 16,
+          color: Colors.grey[600],
+        );
       case 'New York':
-        return Icon(Icons.location_on_outlined, size: 16, color: Colors.grey[600]);
+        return Icon(
+          Icons.location_on_outlined,
+          size: 16,
+          color: Colors.grey[600],
+        );
       default:
         return SizedBox.shrink(); // Return empty widget for unknown details
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import 'package:flutter/material.dart';
 
@@ -154,9 +160,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('CarRental Reviews'),
-        ),
+        appBar: AppBar(title: Text('CarRental Reviews')),
         body: ListView(
           padding: EdgeInsets.all(16.0),
           children: [
@@ -164,7 +168,8 @@ class MyApp extends StatelessWidget {
               name: 'Emma Rodriguez',
               location: 'Barcelona, Spain',
               rating: 5,
-              review: "I've rented cars from various companies, but the experience with CarRental was exceptional.",
+              review:
+                  "I've rented cars from various companies, but the experience with CarRental was exceptional.",
               imageUrl: 'https://via.placeholder.com/50', // Placeholder image
             ),
             SizedBox(height: 16.0),
@@ -172,7 +177,8 @@ class MyApp extends StatelessWidget {
               name: 'John Smith',
               location: 'New York, USA',
               rating: 5,
-              review: "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!",
+              review:
+                  "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!",
               imageUrl: 'https://via.placeholder.com/50', // Placeholder image
             ),
             SizedBox(height: 16.0),
@@ -180,7 +186,8 @@ class MyApp extends StatelessWidget {
               name: 'Ava Johnson',
               location: 'Sydney, Australia',
               rating: 5,
-              review: "I highly recommend CarRental! Their fleet is amazing, and I always feel like I'm getting the best deal with excellent service.",
+              review:
+                  "I highly recommend CarRental! Their fleet is amazing, and I always feel like I'm getting the best deal with excellent service.",
               imageUrl: 'https://via.placeholder.com/50', // Placeholder image
             ),
           ],
@@ -209,9 +216,7 @@ class ReviewCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
@@ -236,10 +241,7 @@ class ReviewCard extends StatelessWidget {
                     ),
                     Text(
                       location,
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey,
-                      ),
+                      style: TextStyle(fontSize: 14, color: Colors.grey),
                     ),
                   ],
                 ),
@@ -257,12 +259,7 @@ class ReviewCard extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Text(
-              review,
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
+            Text(review, style: TextStyle(fontSize: 16)),
           ],
         ),
       ),
