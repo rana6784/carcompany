@@ -360,7 +360,7 @@ class _CarDetailsPageState extends State<CarDetailsPage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             Container(
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -447,10 +447,225 @@ class _CarDetailsPageState extends State<CarDetailsPage> {
                   SizedBox(height: 20),
                   Text(
                     "Not credit card required to reserve",
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 96, 96, 96),
+                    ),
                   ),
                 ],
               ),
+            ),
+            const SizedBox(height: 200),
+            Padding(
+              padding: const EdgeInsets.only(right: 200),
+              child: Image.asset("assets/logoo.png"),
+            ),
+            const SizedBox(height: 10),
+            const Padding(
+              padding: EdgeInsets.only(right: 0),
+              child: Text(
+                "Premium car rental service with a wide selection ",
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+            const Text(
+              "of luxury and everyday vehicles for all your driving ",
+              style: TextStyle(color: Colors.grey),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(right: 300),
+              child: Text("needs.", style: TextStyle(color: Colors.grey)),
+            ),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                const SizedBox(width: 20),
+                const Icon(Icons.facebook, color: Colors.grey),
+                const SizedBox(width: 10),
+                Image.asset("assets/insta.png", width: 20, color: Colors.grey),
+                const SizedBox(width: 10),
+                Image.asset(
+                  "assets/twitter.png",
+                  width: 20,
+                  color: Colors.grey,
+                ),
+                const SizedBox(width: 10),
+                const Icon(Icons.email, color: Colors.grey),
+              ],
+            ),
+            const SizedBox(height: 50),
+            const Padding(
+              padding: EdgeInsets.only(right: 220),
+              child: Text(
+                "QUICK LINKS",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.only(right: 280),
+              child: Text(
+                "Home",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 230),
+              child: Text(
+                "Browse Cars",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 230),
+              child: Text(
+                "List Your Car",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 260),
+              child: Text(
+                "About Us",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 30),
+            const Padding(
+              padding: EdgeInsets.only(right: 220),
+              child: Text(
+                "RESOURCES",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.only(right: 230),
+              child: Text(
+                "Help Centre",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 190),
+              child: Text(
+                "Terms Of Service",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 210),
+              child: Text(
+                "Privacy Policy",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 240),
+              child: Text(
+                "Insurance",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 30),
+            const Padding(
+              padding: EdgeInsets.only(right: 230),
+              child: Text(
+                "CONTACT",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.only(right: 180),
+              child: Text(
+                "1234 Luxury Drive",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 130),
+              child: Text(
+                "San Francisco, CA 94107",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 200),
+              child: Text(
+                "+1 234 567890",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 5),
+            const Padding(
+              padding: EdgeInsets.only(right: 160),
+              child: Text(
+                "info@example.com",
+                style: TextStyle(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Divider(
+              color: Colors.grey,
+              thickness: 1,
+              endIndent: 20,
+              indent: 20,
+            ),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                const SizedBox(width: 50),
+                const Icon(Icons.copyright, color: Colors.grey, size: 20),
+                const SizedBox(width: 5),
+                const Text(
+                  "2025 Brand. All rights reserved.",
+                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                const SizedBox(width: 80),
+                const Text(
+                  "Privacy",
+                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                ),
+                const SizedBox(width: 10),
+                Container(height: 15, width: 1, color: Colors.grey),
+                const SizedBox(width: 10),
+                const Text(
+                  "Terms",
+                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                ),
+                const SizedBox(width: 10),
+                Container(height: 15, width: 1, color: Colors.grey),
+                const SizedBox(width: 10),
+                const Text(
+                  "Cookies",
+                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                ),
+              ],
             ),
           ],
         ),

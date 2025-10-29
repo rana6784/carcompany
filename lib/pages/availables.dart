@@ -46,7 +46,7 @@ class Availables extends StatelessWidget {
       Car(
         imagePath: 'assets/toyotacorolla.png', // Replace with your asset path
         title: 'Toyota Corolla',
-        subtitle: 'Sedan•2021',
+        subtitle: 'Sedan • 2021',
         fuel: 'Diesel',
         transmission: 'Automatic',
         location: 'Los Angeles',
@@ -68,7 +68,7 @@ class Availables extends StatelessWidget {
       Car(
         imagePath: 'assets/toyotacorolla.png', // Replace with your asset path
         title: 'Toyota Corolla',
-        subtitle: 'Sedan•2021',
+        subtitle: 'Sedan • 2021',
         fuel: 'Diesel',
         transmission: 'Automatic',
         location: 'Los Angeles',
@@ -111,7 +111,7 @@ class Availables extends StatelessWidget {
       ),
       Car(
         imagePath: "assets/jeep.png", // Replace with your asset path
-        title: 'volvo c40 ev',
+        title: 'Volvo C40 EV',
         subtitle: 'SUV • 2021',
         fuel: 'Electric',
         transmission: 'Automatic',
@@ -140,7 +140,7 @@ class Availables extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Browse our selection of premium vahicles available",
+              "Browse our selection of premium vehicles available",
               style: TextStyle(color: const Color.fromARGB(255, 152, 152, 152)),
             ),
             Text(
@@ -148,190 +148,203 @@ class Availables extends StatelessWidget {
               style: TextStyle(color: const Color.fromARGB(255, 152, 152, 152)),
             ),
             SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                hintText: 'Search by make, model, or features',
-                hintStyle: const TextStyle(color: Colors.grey),
-                prefixIcon: const Icon(Icons.search, color: Colors.grey),
-                suffixIcon: const Icon(
-                  Icons.arrow_drop_down,
-                  color: Colors.grey,
-                ),
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide.none,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search by make, model, or features',
+                  hintStyle: const TextStyle(color: Colors.grey),
+                  prefixIcon: const Icon(Icons.search, color: Colors.grey),
+                  suffixIcon: const Icon(
+                    Icons.arrow_drop_down,
+                    color: Colors.grey,
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide.none,
+                  ),
                 ),
               ),
             ),
             const SizedBox(height: 50),
-            Text(
-              'Showing 8 Cars',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey[600],
-                fontWeight: FontWeight.w500,
+            Padding(
+              padding: const EdgeInsets.only(right: 250),
+              child: Text(
+                'Showing 8 Cars',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: const Color.fromARGB(255, 87, 87, 87),
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
             // SizedBox(height: 50),
             ...cars.map(
-              (car) => Card(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
+              (car) => Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 8.0,
                 ),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder:
-                            (context) => CarDetailsPage(
-                              image: car.imagePath,
-                              title: car.title,
-                              subtitle: car.subtitle,
-                              fuel: car.fuel,
-                              transmission: car.transmission,
-                              location: car.location,
-                              seats: car.seats,
-                            ),
-                      ),
-                    );
-                  },
-                  borderRadius: BorderRadius.circular(12.0),
-                  child: Container(
-                    width: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Image section
-                        Stack(
-                          children: [
-                            ClipRRect(
-                              borderRadius: const BorderRadius.vertical(
-                                top: Radius.circular(12.0),
+                child: Card(
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder:
+                              (context) => CarDetailsPage(
+                                image: car.imagePath,
+                                title: car.title,
+                                subtitle: car.subtitle,
+                                fuel: car.fuel,
+                                transmission: car.transmission,
+                                location: car.location,
+                                seats: car.seats,
                               ),
-                              child: Image.asset(
-                                car.imagePath,
-                                height: 150,
-                                width: double.infinity,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            // Available now badge
-                            Positioned(
-                              top: 8.0,
-                              left: 8.0,
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8.0,
-                                  vertical: 4.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                child: Text(
-                                  "Available Now",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            // price overlay
-                            Positioned(
-                              bottom: 8.0,
-                              right: 8.0,
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0,
-                                  vertical: 6.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.7),
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                child: Text(
-                                  '\$${car.price.toStringAsFixed(0)}/day',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
                         ),
-                        // details section
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                      );
+                    },
+                    borderRadius: BorderRadius.circular(12.0),
+                    child: Container(
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Image section
+                          Stack(
                             children: [
-                              Text(
-                                car.title,
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
+                              ClipRRect(
+                                borderRadius: const BorderRadius.vertical(
+                                  top: Radius.circular(12.0),
+                                ),
+                                child: Image.asset(
+                                  car.imagePath,
+                                  height: 150,
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                              SizedBox(height: 8.0),
-                              Text(
-                                car.subtitle,
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Colors.grey,
+                              // Available now badge
+                              if (car.availableNow)
+                                Positioned(
+                                  top: 8.0,
+                                  left: 8.0,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0,
+                                      vertical: 4.0,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.blue,
+                                      borderRadius: BorderRadius.circular(20.0),
+                                    ),
+                                    child: Text(
+                                      "Available Now",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 12.0),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.event_seat,
-                                    size: 20.0,
-                                    color: Colors.grey[600],
+                              // price overlay
+                              Positioned(
+                                bottom: 8.0,
+                                right: 8.0,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 12.0,
+                                    vertical: 6.0,
                                   ),
-                                  SizedBox(width: 4.0),
-                                  Text('${car.seats} seats'),
-                                  SizedBox(width: 16.0),
-                                  Icon(
-                                    Icons.electrical_services,
-                                    size: 20.0,
-                                    color: Colors.grey[600],
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.7),
+                                    borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  const SizedBox(width: 4.0),
-                                  Text(car.fuel),
-                                ],
-                              ),
-                              const SizedBox(height: 4.0),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.speed,
-                                    size: 20.0,
-                                    color: Colors.grey[600],
+                                  child: Text(
+                                    '\$${car.price.toStringAsFixed(0)}/day',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                  const SizedBox(width: 4.0),
-                                  Text(car.transmission),
-                                  const Spacer(),
-                                  Icon(
-                                    Icons.location_on,
-                                    size: 20.0,
-                                    color: Colors.grey[600],
-                                  ),
-                                  const SizedBox(width: 4.0),
-                                  Text(car.location),
-                                ],
+                                ),
                               ),
                             ],
                           ),
-                        ),
-                      ],
+                          // details section
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  car.title,
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(height: 8.0),
+                                Text(
+                                  car.subtitle,
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                const SizedBox(height: 12.0),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.event_seat,
+                                      size: 20.0,
+                                      color: Colors.grey[600],
+                                    ),
+                                    SizedBox(width: 4.0),
+                                    Text('${car.seats} seats'),
+                                    SizedBox(width: 16.0),
+                                    Icon(
+                                      Icons.electrical_services,
+                                      size: 20.0,
+                                      color: Colors.grey[600],
+                                    ),
+                                    const SizedBox(width: 4.0),
+                                    Text(car.fuel),
+                                  ],
+                                ),
+                                const SizedBox(height: 4.0),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.speed,
+                                      size: 20.0,
+                                      color: Colors.grey[600],
+                                    ),
+                                    const SizedBox(width: 4.0),
+                                    Text(car.transmission),
+                                    const Spacer(),
+                                    Icon(
+                                      Icons.location_on,
+                                      size: 20.0,
+                                      color: Colors.grey[600],
+                                    ),
+                                    const SizedBox(width: 4.0),
+                                    Text(car.location),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
